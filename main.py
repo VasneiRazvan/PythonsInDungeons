@@ -2,10 +2,10 @@ import os
 
 welcome_message = """
 ****************************************************************************************
-* Welcome,stranger.                                                                    *
+*                                   Welcome,stranger.                                  *
 * Here in Hinderlands, you'll get to fight dragons and conquer the deadliest dungeons. *
-* In a country where magic rules, anything is possible if you wish so.                 *
-* It all depends on you, brave hero.                                                   *
+*        In a country where magic rules, anything is possible if you wish so.          *
+*                          It all depends on you, brave hero.                          *
 ****************************************************************************************
 """
 print(welcome_message)
@@ -14,5 +14,6 @@ user_answer = input("Yes or No -> ")
 if user_answer.upper() == "YES":
     print("OK")
     os.system("cls")  # windows
+    # os.system("clear")  # mac/linux/bash
 else:
     print("Thank You, good bye!")
