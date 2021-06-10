@@ -11,16 +11,15 @@ class Player:
 
 
 class Warrior(Player):
-    def __init__(self, name, mana, health, damage):
-        super.__init__(name, mana(0), health(10), damage(10))
+    def __init__(self, name):
+        super().__init__(name, 0, 100, 50)
 
 
 class Wizard(Player):
-    def __init__(self, name, mana, health, damage):
-        super.__init__(name, mana(100), health(10), damage(0))
+    def __init__(self, name):
+        super().__init__(name, 50, 100, 0)
 
 
-class Hunter(Player):
-    def __init__(self, name, mana, health, damage):
-        super.__init__(name, mana(0), health(10), damage(7))
-
+class Rogue(Player):
+    def __init__(self, name):
+        super().__init__(name, 25, 100, 25)
