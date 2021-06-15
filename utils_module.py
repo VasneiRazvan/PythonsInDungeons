@@ -39,23 +39,18 @@ def start_adventure():
             print("Intro to the World")
             input("Press enter to continue ...")
             os.system("cls")
-            winsound.PlaySound(exploring_sound, winsound.SND_ASYNC)
-            print("""
-You are at a crossroad.
-You have 3 paths in front of you:
-1. Going to a Village.
-2. Going in a Dark and Misty Forrest
-3. Going in the Arid Desert
-""")
-            path_option = input("Please choose where to go: ")
         elif answer == 2:
             player_name = input("Choose a name: ")
             player = player_module.Wizard(player_name)
             print("Intro to the World")
+            input("Press enter to continue ...")
+            os.system("cls")
         elif answer == 3:
             player_name = input("Choose a name: ")
             player = player_module.Rogue(player_name)
             print("Intro to the World")
+            input("Press enter to continue ...")
+            os.system("cls")
         else:
             print("Choose a valid option")
     else:
