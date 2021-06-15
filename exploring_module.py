@@ -29,6 +29,5 @@ Press enter to continue""")
         print("""
 Going to the Arid Dessert ...
 Press enter to continue""")
-        os.system("cls")
     else:
         print("Please choose a valid option")
