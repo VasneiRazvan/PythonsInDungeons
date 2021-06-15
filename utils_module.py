@@ -1,11 +1,12 @@
 import os
 import winsound
 import player_module
+import exploring_module
 
 
 main_menu_sound = "Main_Menu.wav"
-exploring_sound = "Exploring.wav"
-battle_sound = "BattleFinal.wav"
+# exploring_sound = "Exploring.wav"
+# battle_sound = "BattleFinal.wav"
 
 
 def welcome_message():
@@ -39,18 +40,21 @@ def start_adventure():
             print("Intro to the World")
             input("Press enter to continue ...")
             os.system("cls")
+            exploring_module.start_exploring()
         elif answer == 2:
             player_name = input("Choose a name: ")
             player = player_module.Wizard(player_name)
             print("Intro to the World")
             input("Press enter to continue ...")
             os.system("cls")
+            exploring_module.start_exploring()
         elif answer == 3:
             player_name = input("Choose a name: ")
             player = player_module.Rogue(player_name)
             print("Intro to the World")
             input("Press enter to continue ...")
             os.system("cls")
+            exploring_module.start_exploring()
         else:
             print("Choose a valid option")
     else:

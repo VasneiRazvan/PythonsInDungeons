@@ -12,19 +12,23 @@ You have 3 paths in front of you:
 1. Going to a Village.
 2. Going in a Dark and Misty Forrest
 3. Going in the Arid Desert""")
-    path_option = input("Please choose where to go: ")
+    path_option = int(input("Please choose where to go: "))
     if path_option == 1:
+        os.system("cls")
         print("""
 Going to Village ...
 Press enter to continue""")
+    elif path_option == 2:
         os.system("cls")
-        if path_option == 2:
-            print("""
-    Going in the Dark and Misty Forrest ...
-    Press enter to continue""")
-            os.system("cls")
-        if path_option == 3:
-            print("""
-    Going to the Arid Dessert ...
-    Press enter to continue""")
-            os.system("cls")
+        print("""
+Going in the Dark and Misty Forrest ...
+Press enter to continue""")
+        os.system("cls")
+    elif path_option == 3:
+        os.system("cls")
+        print("""
+Going to the Arid Dessert ...
+Press enter to continue""")
+        os.system("cls")
+    else:
+        print("Please choose a valid option")
