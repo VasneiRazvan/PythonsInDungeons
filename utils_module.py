@@ -1,7 +1,9 @@
 import os
+import random
 import winsound
 import player_module
 import exploring_module
+import enemy_module
 
 
 main_menu_sound = "Main_Menu.wav"
@@ -59,3 +61,13 @@ def start_adventure():
             print("Choose a valid option")
     else:
         print("Thank You, good bye!")
+
+
+def random_enemy():
+    random_number = random.randint(0, 2)
+    if random_number == 0:
+        enemy = enemy_module.Goblin()
+    elif random_number == 1:
+        enemy = enemy_module.Orc()
+    elif random_number == 2:
+        enemy = enemy_module.Rat()
