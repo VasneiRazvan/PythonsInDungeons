@@ -4,9 +4,9 @@ import winsound
 import player_module
 import exploring_module
 import enemy_module
-
-
+battle_sound = "BattleFinal.wav"
 main_menu_sound = "Main_Menu.wav"
+exploring_sound = "Exploring.wav"
 
 
 def welcome_message():
@@ -22,7 +22,7 @@ def welcome_message():
 
 
 def start_adventure():
-    winsound.PlaySound(main_menu_sound, winsound.SND_ASYNC)
+    game_sound_menu()
     print("Would You like to start the adventure?")
     user_answer = input("Yes or No -> ")
     if user_answer.upper() == "YES":
@@ -69,3 +69,25 @@ def random_enemy():
         enemy = enemy_module.Orc()
     elif random_number == 2:
         enemy = enemy_module.Rat()
+
+
+def game_sound_menu():
+    winsound.PlaySound(main_menu_sound, winsound.SND_ASYNC)
+
+
+def game_sound_exploring():
+    winsound.PlaySound(exploring_sound, winsound.SND_ASYNC)
+
+
+def game_sound_battle():
+    winsound.PlaySound(battle_sound, winsound.SND_ASYNC)
+
+
+def random_help():
+    random_win = random.randint(0, 1)
+    if random_win == 0:
+        print("""Gods have heard your help and sent someone to help you!
+                                You Have Won!""")
+    elif random_win == 1:
+        print("""Gods didn't had mercy for you
+                   You Have Lost Your Life""")

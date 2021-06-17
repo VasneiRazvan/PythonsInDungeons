@@ -1,11 +1,10 @@
-import winsound
 import os
 import battle_module
-exploring_sound = "Exploring.wav"
+import utils_module
 
 
 def start_exploring():
-    winsound.PlaySound(exploring_sound, winsound.SND_ASYNC)
+    utils_module.game_sound_exploring()
     print("""
 You are at a crossroad.
 You have 3 paths in front of you:
