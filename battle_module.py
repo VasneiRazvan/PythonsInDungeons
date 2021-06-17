@@ -8,3 +8,4 @@ def battle_enemy_village():
     print("You are in the village ...")
     print("From a backside alley a enemy appears")
     utils_module.random_enemy()
+    input("what are you going to do? ...")

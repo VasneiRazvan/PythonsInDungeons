@@ -7,8 +7,6 @@ import enemy_module
 
 
 main_menu_sound = "Main_Menu.wav"
-# exploring_sound = "Exploring.wav"
-# battle_sound = "BattleFinal.wav"
 
 
 def welcome_message():
