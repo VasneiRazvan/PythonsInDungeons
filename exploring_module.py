@@ -20,7 +20,13 @@ You have 3 paths in front of you:
         battle_module.battle_enemy_village()
     elif path_option == 2:
         os.system("cls")
+        print("Going to the village ...")
+        input("Press enter to continue ...")
+        battle_module.battle_enemy_forest()
     elif path_option == 3:
         os.system("cls")
+        print("Going to the village ...")
+        input("Press enter to continue ...")
+        battle_module.battle_enemy_desert()
     else:
         print("Please choose a valid option")
