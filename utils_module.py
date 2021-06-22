@@ -86,8 +86,16 @@ def game_sound_battle():
 def random_help():
     random_win = random.randint(0, 1)
     if random_win == 0:
-        print("""Gods have heard your help and sent someone to help you!
-                                You Have Won!""")
+        random_winner()
     elif random_win == 1:
-        print("""Gods didn't had mercy for you
-                   You Have Lost Your Life""")
+        random_loser()
+
+
+def random_winner():
+    print("""Gods have heard your help and sent someone to help you!
+                                    You Have Won!""")
+
+
+def random_loser():
+    print("""Gods didn't had mercy for you
+               You Have Lost Your Life""")
