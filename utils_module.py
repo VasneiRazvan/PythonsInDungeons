@@ -1,14 +1,19 @@
+# importing libraries so I can build every utility in the game
 import os
 import random
 import winsound
+# importing modules built by me
 import player_module
 import exploring_module
 import enemy_module
+# the sounds that are in the same folder as the rest of the project
+# they are initialised in a variable
 battle_sound = "BattleFinal.wav"
 main_menu_sound = "Main_Menu.wav"
 exploring_sound = "Exploring.wav"
 
 
+# the welcome message that appears every time when the user starts playing.
 def welcome_message():
     welcome = """
     ****************************************************************************************
@@ -21,6 +26,8 @@ def welcome_message():
     print(welcome)
 
 
+# initial questioning for the user so he can choose the character type,
+# enter characters name and choose what to explore
 def start_adventure():
     game_sound_menu()
     print("Would You like to start the adventure?")
@@ -61,6 +68,8 @@ def start_adventure():
         print("Thank You, good bye!")
 
 
+# function so every time a different enemy appears built with
+# random library
 def random_enemy():
     random_number = random.randint(0, 2)
     if random_number == 0:
@@ -71,6 +80,7 @@ def random_enemy():
         enemy = enemy_module.Rat()
 
 
+# down bellow are the functions for in game music
 def game_sound_menu():
     winsound.PlaySound(main_menu_sound, winsound.SND_ASYNC)
 
@@ -83,19 +93,12 @@ def game_sound_battle():
     winsound.PlaySound(battle_sound, winsound.SND_ASYNC)
 
 
+# "Ask gods for help" random function
 def random_help():
     random_win = random.randint(0, 1)
     if random_win == 0:
-        random_winner()
+        print("""Gods have heard your help and sent someone to help you!
+                                             You Have Won!""")
     elif random_win == 1:
-        random_loser()
-
-
-def random_winner():
-    print("""Gods have heard your help and sent someone to help you!
-                                    You Have Won!""")
-
-
-def random_loser():
-    print("""Gods didn't had mercy for you
-               You Have Lost Your Life""")
+        print("""Gods didn't had mercy for you
+                    You Have Lost Your Life""")
