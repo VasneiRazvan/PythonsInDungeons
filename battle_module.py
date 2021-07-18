@@ -58,4 +58,4 @@ def battle_enemy_desert():
     elif fighting_option == 2:
         utils_module.random_help()
     elif fighting_option == 3:
-        print("run for your life")
+        utils_module.run_for_life()

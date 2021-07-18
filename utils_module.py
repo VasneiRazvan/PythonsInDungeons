@@ -33,7 +33,6 @@ def start_adventure():
     print("Would You like to start the adventure?")
     user_answer = input("Yes or No -> ")
     if user_answer.upper() == "YES":
-        print("OK")
         os.system("cls")  # windows
         # os.system("clear")  # mac/linux/bash
         answer = int(input("""What type of player are you?
@@ -102,3 +101,14 @@ def random_help():
     elif random_win == 1:
         print("""Gods didn't had mercy for you
                     You Have Lost Your Life""")
+
+
+# "Run for your life" random function
+def run_for_life():
+    random_run = random.randint(0, 1)
+    if random_run == 0:
+        print("""The enemy has lost track of you,
+                                You have survived this time!""")
+    elif random_run == 1:
+        print("""The enemy was faster than you and caught you
+                                            You Have Lost Your Life""")
