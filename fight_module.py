@@ -1,5 +1,4 @@
 import random
-import player_module
 weapons = ["Sword", "Spell", "Fire"]
 shields = ["Armour", "Magic", "Water"]
 

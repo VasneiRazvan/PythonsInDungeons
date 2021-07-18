@@ -19,12 +19,12 @@ You have 3 paths in front of you:
         battle_module.battle_enemy_village()
     elif path_option == 2:
         os.system("cls")
-        print("Going to the village ...")
+        print("Going to the dark and misty forest ...")
         input("Press enter to continue ...")
         battle_module.battle_enemy_forest()
     elif path_option == 3:
         os.system("cls")
-        print("Going to the village ...")
+        print("Going to the arid desert ...")
         input("Press enter to continue ...")
         battle_module.battle_enemy_desert()
     else:
