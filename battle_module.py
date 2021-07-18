@@ -1,5 +1,6 @@
 import utils_module
 import os
+import fight_module
 
 
 def battle_enemy_village():
@@ -19,7 +20,7 @@ def battle_enemy_village():
     elif fighting_option == 2:
         utils_module.random_help()
     elif fighting_option == 3:
-        print("run for your life")
+        utils_module.run_for_life()
 
 
 def battle_enemy_forest():
@@ -39,7 +40,7 @@ def battle_enemy_forest():
     elif fighting_option == 2:
         utils_module.random_help()
     elif fighting_option == 3:
-        print("run for your life")
+        utils_module.run_for_life()
 
 
 def battle_enemy_desert():
